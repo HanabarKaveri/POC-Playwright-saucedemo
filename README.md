@@ -8,6 +8,29 @@ This project is an End-to-End test automation framework developed using Playwrig
 **URL:** https://www.saucedemo.com  
 **Testing Type:** Functional Testing (Happy Path)
 
+## Project Structure
+```text
+Playwright-POM-Framework
+│
+├── pages
+│   ├── LoginPage.js
+│   ├── ProductsPage.js
+│   ├── CartPage.js
+│   ├── CheckoutInformationPage.js
+│   ├── CheckoutOverviewPage.js
+│   └── CheckoutCompletePage.js
+│
+├── tests
+│   └── purchaseFlow.spec.js
+│
+├── test-data
+│   └── testData.json
+│
+├── playwright.config.js
+├── package.json
+└── README.md
+```
+
 ### Pre-Conditions16 
 Browser launched
 - Application URL loaded
