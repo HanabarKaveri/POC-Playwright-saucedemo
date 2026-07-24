@@ -41,7 +41,7 @@ Playwright-POM-Framework
 └── README.md
 ```
 
-### Pre-Conditions16 
+### Pre-Conditions
 Browser launched
 - Application URL loaded
 - Valid user credentials available
