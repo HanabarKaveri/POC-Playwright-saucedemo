@@ -21,11 +21,21 @@ Playwright-POM-Framework
 │   └── CheckoutCompletePage.js
 │
 ├── tests
-│   └── purchaseFlow.spec.js
+│   └── cart.spec.js
+│   └── checkoutInformation.spec.js
+│   └── checkoutOverview.spec.js
+│   └── completeCheckout.spec.js
+│   └── login.spec.js
+│   └── products.spec.js
+│
+├── fixtures
+│   └── baseFixture.js
 │
 ├── test-data
-│   └── testData.json
+│   └── testData.js
 │
+├── .env
+├── github_push.sh
 ├── playwright.config.js
 ├── package.json
 └── README.md
@@ -65,3 +75,32 @@ Browser launched
 - JavaScript
 - Node.js
 - Page Object Model (POM)
+
+## Execution Steps
+1. Install project dependencies.
+```
+npm install
+```
+2. Install Playwright browsers.
+```
+npx playwright install
+```
+3. Execute all tests.
+```
+npx playwright test
+```
+4. Execute specific tests.
+```
+npx playwright test tests/completeCheckout.spec.js5
+```
+5. Generate the Allure report.
+```
+npx allure generate allure-results --clean
+```
+6. Open the Allure report.
+```
+allure open allure-report
+```
+
+## Conclusion
+This Playwright automation framework successfully tests the complete purchase flow of the SauceDemo application. The Page Object Model (POM) structure helps keep the code organized, easy to understand, and easy to update. The framework provides reliable test execution and validates the main user journey from login to successful order placement.
