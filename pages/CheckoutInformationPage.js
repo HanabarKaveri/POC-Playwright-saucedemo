@@ -4,7 +4,7 @@ export class CheckoutInformationPage {
         this.page = page;
 
         this.title = page.getByText('Checkout: Your Information');
-        this.firstName = page.getByPlaceholder('First Name');
+        
         this.lastName = page.getByPlaceholder('Last Name');
         this.postalCode = page.getByPlaceholder('Zip/Postal Code');
         this.continueButton = page.getByRole('button', { name: 'Continue' });
@@ -12,7 +12,7 @@ export class CheckoutInformationPage {
 
     async fillCheckoutInformation(firstName, lastName, postalCode) {
 
-        await this.firstName.fill(firstName);
+        await this.page.getByPlaceholder('First Name').fill(firstName);
         await this.lastName.fill(lastName);
         await this.postalCode.fill(postalCode);
     }

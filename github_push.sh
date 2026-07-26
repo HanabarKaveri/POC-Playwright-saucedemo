@@ -2,13 +2,20 @@
 
 echo "===== Github Project Setup ====="
 
-git init 
-git branch -M main
+REPO_URL="https://github.com/HanabarKaveri/POM-playwright-saucedemo.git"
+
+if [ ! -d ".git" ]; then
+	git init
+	git branch -M main
+	git remote add origin "$REPO_URL"
+fi
+
 git add .
 
-git commit -m "Initial Playwright POM project"
+echo "Enter commit message:"
+read MESSAGE
 
-git remote add origin https://github.com/HanabarKaveri/POM-playwright-saucedemo.git
+git commit -m "$MESSAGE"
 
 git push -u origin main
 
